@@ -1,0 +1,130 @@
+html {
+  height: 100%;
+
+  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(
+    45deg,
+    rgba(176, 176, 176, 1) 0%,
+    rgba(213, 213, 213, 1) 50%,
+    rgba(176, 176, 176, 1) 90%
+  );
+}
+
+.title {
+  text-align: center;
+  font-size: 4em;
+}
+
+.contenedor {
+  margin: auto;
+  width: 800px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.letras {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 3em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.q {
+  background: cornflowerblue;
+  box-shadow: 0.15rem 0.15rem 0.125rem 0.0625rem rgb(33, 50, 82);
+}
+
+.w {
+  background: crimson;
+  box-shadow: 0.15rem 0.15rem 0.125rem 0.0625rem rgb(71, 6, 19);
+}
+
+.e {
+  background: darkgoldenrod;
+  box-shadow: 0.15rem 0.15rem 0.125rem 0.0625rem rgb(63, 46, 3);
+}
+
+.r {
+  background: darkslateblue;
+  box-shadow: 0.15rem 0.15rem 0.125rem 0.0625rem rgb(24, 20, 46);
+}
+
+.contenedor2 {
+  margin: auto;
+  width: 800px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonStart {
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+  width: 80px;
+  height: 40px;
+  animation: bounce 5s infinite linear;
+  position: relative;
+  background: rgb(30, 102, 210);
+}
+
+.buttonStart:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+@keyframes bounce {
+  0% {
+    top: 0em;
+  }
+
+  40% {
+    top: 0em;
+  }
+
+  43% {
+    top: -0.9em;
+  }
+
+  46% {
+    top: 0em;
+  }
+
+  48% {
+    top: -0.4em;
+  }
+
+  50% {
+    top: 0em;
+  }
+
+  100% {
+    top: 0em;
+  }
+}
+
+.contenedor3 {
+  margin: auto;
+  width: 800px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+/*# sourceMappingURL=/simonJS/css.967bad95.css.map */
