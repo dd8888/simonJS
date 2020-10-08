@@ -23329,15 +23329,10 @@ var arrayLetters = ["Q", "W", "E", "R"];
 
 var stylesLetters = function stylesLetters(element) {
   var color = element.style.background;
-  var animationStyles = [{
-    background: "white"
-  }, {
-    transform: "scale(1.1)"
-  }, {
-    background: color
-  }, {
-    transform: "scale(1.0)"
-  }];
+  var animationStyles = {
+    background: ["white", color],
+    transform: ["scale(1.1)", "scale(1.0)"]
+  };
   var animationsTiming = {
     duration: 1000,
     endDelay: 1000
@@ -23460,7 +23455,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49229" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49361" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
