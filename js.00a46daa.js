@@ -22593,15 +22593,15 @@ var difficulty = "easy";
 var loops = 4;
 var streak = 0;
 difEasy.addEventListener("click", function () {
-  selector.style.marginLeft = "245px";
+  selector.style.left = "-67px";
   difficulty = "easy";
 });
 difMedium.addEventListener("click", function () {
-  selector.style.marginLeft = "315px";
+  selector.style.left = "0px";
   difficulty = "medium";
 });
 difHard.addEventListener("click", function () {
-  selector.style.marginLeft = "380px";
+  selector.style.left = "67px";
   difficulty = "hard";
 });
 var correctValue = document.querySelector(".correctAnswers"); // eslint-disable-next-line quotes
@@ -22790,7 +22790,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57177" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57298" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
