@@ -70,7 +70,7 @@ html {
   border-radius: 2em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 300;
   color: #ffffff;
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
@@ -78,13 +78,106 @@ html {
   transition: all 0.2s;
   width: 80px;
   height: 40px;
-  animation: bounce 5s infinite linear;
   position: relative;
   background: rgb(30, 102, 210);
 }
 
-.buttonStart:hover {
+.buttonStart:hover, .easy:hover, .medium:hover, .hard:hover{
   border-color: rgba(255, 255, 255, 1);
+}
+
+
+.contenedor3 {
+  margin: auto;
+  width: 800px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.options{
+  margin: auto;
+  width: 800px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+.easy{
+  background-color: seagreen;
+  color: white;
+  font-size: 1em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  animation: bounce 5s infinite linear;
+  position: relative;
+
+
+}
+.medium{
+  background-color: rgb(255, 175, 71);
+  color: white;
+  font-size: 1em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  animation: bounce 5s infinite linear;
+  position: relative;
+  animation-delay: 100ms 
+
+
+
+}
+.hard{
+  background-color: rgb(224, 5, 5);
+  color: white;
+  font-size: 1em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  animation: bounce 5s infinite linear;
+  animation-delay: 200ms;
+  position: relative;
+
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+
+}
+.selector{
+  margin: auto;
+  width: 800px;
+  height: 8px;
+  margin-left: 245px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.scores{
+  width: 200px;
+  height: 150px;
+  border: 3px dashed black;
+  text-align: center;
+  position: absolute;
+  background-color: peru;
+  box-shadow: 0.55rem 0.55rem 0.125rem 0.0625rem rgb(148, 97, 46);
+  border-radius: 10px;
+  top: 20px;
+  left: 20px;
 }
 
 @keyframes bounce {
@@ -115,15 +208,6 @@ html {
   100% {
     top: 0em;
   }
-}
-
-.contenedor3 {
-  margin: auto;
-  width: 800px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 
