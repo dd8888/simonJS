@@ -22586,9 +22586,9 @@ var selector = document.querySelector(".selector");
 var firstScore = document.querySelector(".firstScore");
 var secondScore = document.querySelector(".secondScore");
 var thirdScore = document.querySelector(".thirdScore");
-firstScore.textContent = "First score: ".concat(localStorage.firstScore);
-secondScore.textContent = "Second score: ".concat(localStorage.secondScore);
-thirdScore.textContent = "Third score: ".concat(localStorage.thirdScore);
+firstScore.textContent = "First score: ".concat(localStorage.firstScore !== undefined ? localStorage.firstScore : "0");
+secondScore.textContent = "Second score: ".concat(localStorage.secondScore !== undefined ? localStorage.secondScore : "0");
+thirdScore.textContent = "Third score: ".concat(localStorage.thirdScore !== undefined ? localStorage.thirdScore : "0");
 var difficulty = "easy";
 var loops = 4;
 var streak = 0;
@@ -22790,7 +22790,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57298" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57434" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
