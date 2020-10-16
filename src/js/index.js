@@ -3,8 +3,10 @@
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable quotes */
 import { Howl } from "howler";
-import _, { first } from "lodash";
+import _ from "lodash";
 import swal from "sweetalert";
+import Scores from "./Scores";
+import Rules from "./Rules";
 
 const audioUrl1 = require("../assets/simonSound1.mp3");
 const audioUrl2 = require("../assets/simonSound2.mp3");
@@ -34,12 +36,11 @@ const difEasy = document.querySelector(".easy");
 const difMedium = document.querySelector(".medium");
 const difHard = document.querySelector(".hard");
 const selector = document.querySelector(".selector");
-const firstScore = document.querySelector(".firstScore");
-const secondScore = document.querySelector(".secondScore");
-const thirdScore = document.querySelector(".thirdScore");
-firstScore.textContent = `First score: ${localStorage.firstScore}`;
-secondScore.textContent = `Second score: ${localStorage.secondScore}`;
-thirdScore.textContent = `Third score: ${localStorage.thirdScore}`;
+
+const scores = new Scores();
+const rules = new Rules();
+scores.getScores();
+rules.showRules();
 
 let difficulty = "easy";
 let loops = 4;
@@ -76,7 +77,6 @@ const stylesLetters = (element) => {
   return [animationStyles, animationsTiming];
 };
 
-let isRunning = false;
 let isFinished = false;
 const arrayRandomLetters = [];
 
@@ -111,7 +111,6 @@ const animateSingleLetter = (letter) => {
 };
 
 const getRandomLetter = (delay = 1000, iterations = 4) => {
-  isRunning = true;
   button.disabled = true;
   button.style.background = "grey";
   (function loop(i) {
@@ -124,23 +123,8 @@ const getRandomLetter = (delay = 1000, iterations = 4) => {
       } else {
         getUserInput();
       }
-    }, delay); // delay
+    }, delay);
   })(iterations);
-};
-
-const setScores = (score) => {
-  if (localStorage.firstScore === undefined) {
-    localStorage.firstScore = 0;
-    localStorage.secondScore = 0;
-    localStorage.thirdScore = 0;
-  }
-  if (score > localStorage.firstScore) {
-    localStorage.firstScore = score;
-  } else if (score > localStorage.secondScore) {
-    localStorage.secondScore = score;
-  } else if (score > localStorage.thirdScore) {
-    localStorage.thirdScore = score;
-  }
 };
 
 const arrayAnswers = [];
@@ -158,7 +142,7 @@ const checkAnswer = (size) => {
       }
     } else {
       setTimeout(() => {
-        setScores(correctAnswers * 10);
+        scores.setScores(correctAnswers * 10);
         swal("Oops!", "You lost! 😔", "error").then((doClose) => {
           if (doClose) {
             window.location.reload();
@@ -200,15 +184,3 @@ button.addEventListener(
   },
   false
 );
-
-const showRules = () => {
-  if (localStorage.rules === undefined) {
-    localStorage.rules = 1;
-    swal(
-      "Rules!",
-      "Rules are simple. Players must repeat random sequences of sounds by pressing the colored keys in the correct order. ",
-      "info"
-    );
-  }
-};
-showRules();

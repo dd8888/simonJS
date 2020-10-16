@@ -116,8 +116,7 @@ html {
   font-family: "Courier New", Courier, monospace;
   animation: bounce 5s infinite linear;
   position: relative;
-
-
+  
 }
 .medium{
   background-color: rgb(255, 175, 71);
@@ -129,10 +128,7 @@ html {
   font-family: "Courier New", Courier, monospace;
   animation: bounce 5s infinite linear;
   position: relative;
-  animation-delay: 100ms 
-
-
-
+  animation-delay: 100ms ;
 }
 .hard{
   background-color: rgb(224, 5, 5);
@@ -170,6 +166,7 @@ html {
 
 .scores{
   display: inline-block;
+  padding: 20px;
   height: 150px;
   border: 3px dashed black;
   text-align: center;
