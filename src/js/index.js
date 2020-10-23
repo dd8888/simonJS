@@ -1,3 +1,8 @@
+/* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
+/* eslint-disable comma-dangle */
 /* eslint-disable wrap-iife */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
@@ -151,7 +156,7 @@ const checkAnswer = (size) => {
       }, 100);
     }
   } catch (error) {
-    console.log("");
+    console.log(error);
   }
 };
 document.onkeydown = function (e) {
